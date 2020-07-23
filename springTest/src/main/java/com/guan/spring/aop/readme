@@ -1,0 +1,10 @@
+Spring的AOP的存在是为了解耦，AOP可以让一组类共享相同的行为。
+在OOP只能通过继承类和实现接口，来使代码的耦合度增强，且类继承只能为单继承，阻碍更多行为添加到一组类上，
+AOP弥补了OOP的不足
+
+Spring支持AspectJ的注解式切面编程
+（1）使用@AspectJ声明一个切面。
+（2）使用@After、@Befor、@Around定义建言（advice），可直接将拦截规则（切点）作为参数。
+（3）其中@After、@Befor、@Around参数的拦截规则为切点（PointCut），为了是切点复用，可使用@PointCut专门
+定义拦截规则，然后在@After、@Befor、@Around的参数中调用。
+（4）其中符合条件的每一个被拦截处为连接点（JoinPoint）
